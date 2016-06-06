@@ -27,7 +27,7 @@
 				
 				<section data-markdown>
 					<script type="text/template">
-						## Azure Notification Hub
+						## Azure Notification Hubs
 						
 						#### Cross platform mobile push notifications
 						
@@ -41,7 +41,7 @@
 				
 				<section data-markdown>
 					<script type="text/template">
-						# Why?
+						## Why?
 						
 						- Cross platform notifications (UWP, iOS, Android, Kindle, etc.)
 						- Single area of responsibility (Azure Notification Hubs)
@@ -55,7 +55,7 @@
 				
 				<section data-markdown>
 					<script type="text/template">
-						# Architecture
+						## Architecture
 						
 						![Architecture](./images/notification-hub-diagram.png)
 						
@@ -65,7 +65,7 @@
 				
 				<section data-markdown>
 					<script type="text/template">
-						# Notification Hub Setup
+						## Notification Hub Setup
 						
 						1. Navigate your browser to the ***Azure Portal***
 						2. Select ***+ New***
@@ -80,9 +80,9 @@
 				
 				<section data-markdown>
 					<script type="text/template">
-						# Universal Windows Platform (UWP)
+						## Universal Windows Platform (UWP)
 						
-						## Setup Overview
+						### Setup Overview
 						- UWP application
 						- Windows Store association
 						- Notification Hub configuration
@@ -90,18 +90,26 @@
 					</script>
 				</section>
 				
-				<section data-markdown>
-					<script type="text/template">
-						# [UWP] Windows Store Association
-						
-						1. Create the app and associate it with the Store
-						 	- the Windows Store app creation can be on https://developer.microsoft.com or in Visual Studio
-						 	- the association with the UWP app and the Store app is done in Visual Studio
-						2. Retrieve the ***App Secret*** and ***Package SID*** for the app
-							- navigate to https://apps.dev.microsoft.com
-							- click on your app
-							- these two items are found on the current page which we will use later
-					</script>
+				<section>
+					<h2>[UWP] Windows Store Association</h2>
+					
+					<ol style="font-size: 32px">
+						<li>
+							Create the app and associate it with the Store
+							<ul>
+								<li>the Windows Store app creation can be on <a href='https://developer.microsoft.com'>https://developer.microsoft.com</a> or in Visual Studio</li>
+								<li>the association with the UWP app and the Store app is done in Visual Studio</li>
+							</ul>
+						</li>
+						<li>
+							Retrieve the <em><strong>App Secret</strong></em> and <em><strong>Package SID</strong></em> for the app
+							<ul>
+								<li>navigate to <a href='https://apps.dev.microsoft.com'>https://apps.dev.microsoft.com</a></li>
+								<li>click on your app</li>
+								<li>these two items are found on the current page which we will use later</li>
+							</ul>	
+						</li>
+					</ol>
 				</section>
 				
 				<section data-markdown>
