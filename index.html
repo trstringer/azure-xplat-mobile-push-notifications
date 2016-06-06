@@ -73,6 +73,8 @@
 						4. Under *Featured Apps* select ***Notification Hub***
 						5. Fill out the ***New Notification Hub*** requirements
 						 - Unique name for notification hub, namespace, resource group, etc.
+						 
+						*Note: the two different listener connection strings are going to be significant going forward so the apps know how to access the notification hub*
 					</script>
 				</section>
 				
@@ -85,6 +87,20 @@
 						- Windows Store association
 						- Notification Hub configuration
 						- Testing notifications
+					</script>
+				</section>
+				
+				<section data-markdown>
+					<script type="text/template">
+						# [UWP] Windows Store Association
+						
+						1. Create the app and associate it with the Store
+						 	- the Windows Store app creation can be on https://developer.microsoft.com or in Visual Studio
+						 	- the association with the UWP app and the Store app is done in Visual Studio
+						2. Retrieve the ***App Secret*** and ***Package SID*** for the app
+							- navigate to https://apps.dev.microsoft.com
+							- click on your app
+							- these two items are found on the current page which we will use later
 					</script>
 				</section>
 				
