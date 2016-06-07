@@ -166,13 +166,36 @@ private async void Channel_PushNotificationReceived(
 }
 					</code></pre>
 				</section>
+
+				<section>
+					<h2>Android with Xamarin</h2>
+					<h3>What and Why?</h3>
+
+					<ul>
+						<li>Xamarin.Android makes possible to <strong>develop Android apps with C#</strong></li>
+						<li>Write Android apps with <strong>Visual Studio</strong> or <strong>Xamarin Studio</strong></li>
+						<li>It's free</li>
+						<li>Ability to <strong>share code</strong> with Xamarin.iOS and UWP</li>
+						<li>Azure Notification Hubs <strong>push notifications</strong> possible</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>[Xamarin.Android] Dependencies</h2>
+
+					<p><em>Add the following components to your Xamarin.Android project</em></p>
+
+					<img src="./images/xamarin-components.png" alt="components">
+
+					<pre><code>
+using Gcm.Client;
+using WindowsAzure.Messaging;
+					</code></pre>
+				</section>
 				
-				<section data-markdown>
-					<script type="text/template">
-						# Questions?
-						
-						## Feedback? [@tr_stringer](https://twitter.com/tr_stringer)
-					</script>
+				<section>
+					<h2>Questions?</h2>
+					<h2>Feedback? <a href='https://twitter.com/tr_stringer'>@tr_stringer</a> 
 				</section>
 				
 			</div>
