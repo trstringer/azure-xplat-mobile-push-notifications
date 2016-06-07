@@ -122,6 +122,50 @@
 						<li>Add the Window Store app's <strong>App Secret</strong> and <strong>Package SID</strong> to the Windows configuration</li>
 					</ol>
 				</section>
+
+				<section>
+					<h2>[UWP] Client Code</h2>
+					
+					<img src="./images/nuget-messaging-dependency.png" alt="dependency">
+
+					<pre><code>using Windows.Networking.PushNotifications;</code></pre>
+
+					
+				</section>
+
+				<section>
+					<h2>[UWP] Client Code</h2>
+
+					<pre><code>
+PushNotificationChannel channel = 
+	await PushNotificationChannelManager
+		.CreatePushNotificationChannelForApplicationAsync();
+
+NotificationHub hub = 
+	new NotificationHub("hub-name", "listen-connection-string");
+
+Registration registration = await hub.RegisterNativeAsync(channel.Uri);
+
+if (registration.RegistrationId != null)
+	channel.PushNotificationReceived += 
+		Channel_PushNotificationReceived;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>[UWP] Notification Received Event Handler</h2>
+					<pre><code>
+private async void Channel_PushNotificationReceived(
+	PushNotificationChannel sender, 
+	PushNotificationReceivedEventArgs args)
+{
+	if (args.NotificationType == PushNotificationType.Raw)
+	{
+		// do something with args.RawNotification.Content
+	}
+}
+					</code></pre>
+				</section>
 				
 				<section data-markdown>
 					<script type="text/template">
