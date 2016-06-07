@@ -181,6 +181,18 @@ private async void Channel_PushNotificationReceived(
 				</section>
 
 				<section>
+					<h2>[Xamarin.Android] Google Cloud Messaging</h2>
+
+					<ol>
+						<li>Go to the <a href="https://console.developers.google.com">Google API Console</a></li>
+						<li>Create a new project (<em>take note of the project number</em>)</li>
+						<li>Enable <strong>Google Cloud Messaging</strong> in the <strong>Mobile APIs</strong> section</li>
+						<li>Create a credential with type <strong>API key</strong> designated for a server</li>
+						<li>Navigate to the Azure portal under the <strong>DEBUG</strong> section for the Notification Hub to add this API key there</li>
+					</ol>
+				</section>
+
+				<section>
 					<h2>[Xamarin.Android] Dependencies</h2>
 
 					<p><em>Add the following components to your Xamarin.Android project</em></p>
@@ -191,6 +203,34 @@ private async void Channel_PushNotificationReceived(
 using Gcm.Client;
 using WindowsAzure.Messaging;
 					</code></pre>
+				</section>
+
+				<section>
+					<h2>[Xamarin.Android] Initialize Notifications</h2>
+
+					<pre><code>
+GcmClient.CheckDevice(this);
+GcmClient.CheckManifest(this);
+GcmClient.Register(this, "google-project-number");
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>[Xamarin.Android] Push Notification Overview</h2>
+
+					<ul>
+						<li>Service class with a base class of <u><code>GcmServiceBase</code></u></li>
+							<ul>
+								<li>Has <u><code>ServiceAttribute</code></u> on the class</li>
+								<li>This handles <u><code>OnMessage()</code></u>, <u><code>OnRegistered()</code></u>, <u><code>OnUnRegistered</code></u>, and <u><code>OnError()</code></u></li>
+							</ul>
+						<li>Receiver class that has a base class of <u><code>GcmBroadcastReceiverBase&lt;GcmServiceClass&gt;</code></u></li>
+							<ul>
+								<li>The <u><code>GcmServiceClass</code></u> is the above class that had a base class of <u><code>GcmServiceBase</code></u></li>
+							</ul>
+					</ul>
+
+					<p><em>More information found in <a href="https://azure.microsoft.com/en-us/documentation/articles/partner-xamarin-notification-hubs-android-get-started/#connect-your-app-to-the-notification-hub">Azure documentation</a></em></p>
 				</section>
 				
 				<section>
