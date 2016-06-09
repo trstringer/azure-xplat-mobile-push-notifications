@@ -31,7 +31,7 @@
 						
 						#### Cross platform mobile push notifications
 
-						#### Universal Windows Platform and Xamarin (Xamarin.Android, Xamarin.iOS)
+						#### Universal Windows Platform and Xamarin
 						
 						<br />
 						Thomas Stringer <br />
@@ -45,11 +45,11 @@
 					<script type="text/template">
 						## Why?
 						
-						- Cross platform notifications (UWP, iOS, Android, Kindle, etc.)
-						- Single area of responsibility (Azure Notification Hubs)
+						- **Cross platform** notifications (UWP, iOS, Android, Kindle, etc.)
+						- **Single area of responsibility** (Azure Notification Hubs)
 						- Managed platform notification services (GCM, WNS, APNS)
-						- Client-side libraries to register and consume
-						- Server-side libraries to register and notify (.NET, Node.js, PHP, Java, etc.)
+						- **Client-side libraries** to register and consume
+						- **Server-side libraries** to register and notify (.NET, Node.js, PHP, Java, etc.)
 						
 						*... because cross platform push notifications are hard*
 					</script>
@@ -120,7 +120,7 @@
 					<ol>
 						<li>Navigate to the notification nub in the Azure portal</li>
 						<li>Click the top option to <strong>Manage in full Azure</strong></li>
-						<li>In the Azure manager select <strong>DEBUG</strong></li>
+						<li>In the Azure manager select <strong>CONFIGURE</strong></li>
 						<li>Add the Window Store app's <strong>App Secret</strong> and <strong>Package SID</strong> to the Windows configuration</li>
 					</ol>
 				</section>
@@ -180,6 +180,18 @@ private async void Channel_PushNotificationReceived(
 						<li>Ability to <strong>share code</strong> with Xamarin.iOS and UWP</li>
 						<li>Azure Notification Hubs <strong>push notifications</strong> possible</li>
 					</ul>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## Xamarin.Android
+						
+						### Setup Overview
+						- Xamarin.Android application
+						- Google Cloud Messaging registration
+						- Notification Hub configuration
+						- Testing notifications
+					</script>
 				</section>
 
 				<section>
@@ -254,6 +266,17 @@ GcmClient.Register(this, "google-project-number");
 					<h2>iOS with Xamarin</h2>
 
 					<p><em>Coming soon! Please see the <a href="https://azure.microsoft.com/en-us/documentation/articles/partner-xamarin-notification-hubs-ios-get-started/">Azure Notification Hubs documentation on Xamarin.iOS and push notifications</a></em></p>
+				</section>
+
+				<section>
+					<h2>Further In Depth Reading</h2>
+
+					<ul>
+						<li>Registration and installation management <em><a href="https://azure.microsoft.com/en-us/documentation/articles/notification-hubs-registration-management/">Azure Docs</a></em></li>
+						<li>Send notifications from a console app <em><a href="https://azure.microsoft.com/en-us/documentation/articles/notification-hubs-windows-store-dotnet-get-started/#optional-send-notifications-from-a-console-app">Azure Docs</a></em></li>
+						<li>Targeted notifications with tags <em><a href="https://azure.microsoft.com/en-us/documentation/articles/notification-hubs-routing-tag-expressions/">Azure Docs</a></em></li>
+						<li>Use templates to make cross-platform payloads easy <em><a href="https://azure.microsoft.com/en-us/documentation/articles/notification-hubs-templates/">Azure Docs</a></em></li>						
+					</ul>
 				</section>
 				
 				<section>
